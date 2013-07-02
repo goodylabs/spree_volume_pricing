@@ -14,7 +14,7 @@ Spree::Variant.class_eval do
           case volume_price.discount_type
           when 'price'
             return volume_price.amount
-          when 'dollar'
+          when 'euro'
             return self.price - volume_price.amount
           when 'percent'
             return self.price * (1 - volume_price.amount)
